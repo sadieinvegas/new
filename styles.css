@@ -41,6 +41,12 @@ main {
     margin-bottom: 96px;
 }
 
+.nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 /* 
 
@@ -49,7 +55,7 @@ NAVBAR ↓
 */
 
 
-nav {
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -218,7 +224,11 @@ div {
     right: 18px;
 }
 
-
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 /* LANDING */
 
@@ -232,13 +242,13 @@ HEADER / ABOUT US ↓
 
 */
 
-header {
+.header {
     position: relative;
     display: block;
     unicode-bidi: isolate;
 }
 
-header .row {
+.header .row {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -318,6 +328,10 @@ h1 {
     letter-spacing: 0.6px;
 }
 
+.container {
+    padding: 80px 0;
+}
+
 p {
     line-height: 1.5;
 }
@@ -362,6 +376,13 @@ h2 {
     font-weight: bold;
 }
 
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
 
 /* 
 
@@ -378,6 +399,7 @@ FEATURES ↓
 
 #features .row__narrow {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
 }
