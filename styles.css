@@ -18,7 +18,9 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
 }
+
 
 
 .row__narrow {
@@ -34,6 +36,7 @@ body {
 .purple {
     color: #6415ff;
 }
+
 
 section {
     padding: 0 32px;
@@ -277,7 +280,6 @@ h1 {
 
 .header__email {
     width: 100%;
-    height: 68px;
     position: relative;
     display: flex;
     justify-content: flex-end;
@@ -289,9 +291,6 @@ h1 {
     color: black;
     font-size: 16px;
     font-weight: 500;
-    position: absolute;
-    top: 0px;
-    height: 0px;
     z-index: 1;
     border-radius: 500px;
     border-width: 2px;
@@ -315,6 +314,10 @@ h1 {
     border-color: initial;
     border-image: inital;
     transition: 300ms;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 16px 32px;
 }
 
 .header__customers--title {
@@ -381,9 +384,13 @@ FEATURES ↓
 */
 
 
+.features {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 #features {
     position: relative;
-    flex-wrap: wrap;
     margin-top: 40px;
 }
 
@@ -410,15 +417,13 @@ FEATURES ↓
 }
 
 .feature {
-    width: calc(50%);
+    width: calc(100%/3);
 }
 
 .feature__row {
     padding: 32px 24px;
     display: flex;
     align-items: flex-start;
-    justify-content:space-around;
-    flex-wrap: wrap;
 }
 
 .feature__img--wrapper {
@@ -524,15 +529,15 @@ STEPS ↓
 
 #steps .row {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 50%;
+    flex-direction: column;
 }
+
 
 .steps__img--wrapper {
     display: flex;
     position: relative;
     width: 100%;
-    max-width: 448px;
 }
 
 .steps__img {
@@ -540,11 +545,11 @@ STEPS ↓
 }
 
 .steps__description {
-    width: 100%;
-    max-width: 448px;
-    margin-top: 64px;
+    display: flex;
     text-align: center;
     padding: 0;
+    width: 100%;
+    flex-direction: column;
 }
 
 .section__tag {
@@ -555,18 +560,23 @@ STEPS ↓
     text-transform: uppercase;
 }
 
-.purple {
-    color: purple;
-}
 
 .steps__list {
     margin-top: 48px;
 }
 
 .step {
-    flex-direction: column;
-    align-items: center;
+    display: flex;
+    align-items: flex-start;
     margin-top: 32px;
+}
+
+.steps {
+     align-items: center;
+     display: flex;
+     justify-content: space-between;
+     padding: 16px 32px;
+     position: relative;
 }
 
 .step__number {
@@ -581,7 +591,7 @@ STEPS ↓
     flex-direction: column;
     max-width: 320px;
     margin-top: 12px;
-    margin-left: 0px;
+    margin-left: 24px;
 }
 
 .step__title {
@@ -684,21 +694,19 @@ PRICING ↓
 #pricing .row {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.plans {
-    flex-direction: column;
-    align-items: center;
 }
 
 .plans {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    position: relative;
-    z-index: 100;
+    flex-wrap: wrap;
 }
+
+.plan {
+    display: flex;
+    width: calc(100%/3);
+    flex-direction: column;
+}
+
 
 .plan__stripe {
     position: absolute;
@@ -776,19 +784,20 @@ TESTIMONIALS ↓
 }
 
 .testimonials__img {
-    width: 100%;
+    width: 50%;
 }
 
 .testimonials__description {
     margin-top: 64px;
     text-align: center;
-    padding: 0px;
-    width: 100%;
-    max-width: 448px;
+    padding: 16px 32px;
+    width: 50%;
 }
 
 .testimonial {
     margin-top: 40px;
+    padding: 16px 32px;
+    width: 100%;
 }
 
 .testimonial__rating i {
@@ -832,6 +841,7 @@ TESTIMONIALS ↓
 .testimonial__details {
     margin-left: 24px;
 }
+
 
 .testimonial__role {
     color: gray;
@@ -934,18 +944,25 @@ footer {
     overflow: hidden;
 }
 
+.footer__row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0px auto;
+}
+
 .footer__columns {
     justify-content: flex-start;
-    margin-top: -48px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .footer__column {
-    margin-top: 48px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    width: calc(100%/5);
+    align-items: center;
     z-index: 2;
 }
 
@@ -973,7 +990,7 @@ footer {
 }
 
 .footer__bottom {
-    flex-direction: column;
+    flex-direction:column;
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -1009,6 +1026,7 @@ footer {
     margin-top: 32px;
     margin-left: 0px;
 }
+
 
 
 /* 
